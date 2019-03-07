@@ -8,7 +8,7 @@
 
 本章的代码在[项目TutorialForJavascript/frontend-basic](https://github.com/TutorialForJavascript/frontend-basic)中
 
-**本节的代码在C0中**
+**本节的代码在[C0](https://github.com/TutorialForJavascript/frontend-basic/tree/master/code/C0)中**
 
 ## B/S模式的结构
 
@@ -54,11 +54,6 @@ html5是目前最新的html规范,已经好几年了,但目前还没有做到所
 1. 前端应用页面规范
 
 + 前端应用调用本地资源
-  1. 使用本地存储
-  2. 使用本地文件系统
-  3. 使用本地摄像头和麦克风
-  4. 使用本地多线程资源
-  5. 使用本地gpu计算资源
 
 + 前端应用与服务端的通信
   1. 前端应用使用ajax技术和fetch技术与服务端通信
