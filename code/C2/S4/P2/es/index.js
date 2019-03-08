@@ -1,6 +1,6 @@
 const Synthesis = window.speechSynthesis
 /**
- * 录像用的前端项目
+ * 语音合成用的app
  */
 class SpeakApplication {
     /**
