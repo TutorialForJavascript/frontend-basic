@@ -1,5 +1,5 @@
 {
-    "name": "C2-S4-P2",
+    "name": "C2-S6-P1",
     "version": "0.0.1",
     "description": "可以选择捕获屏幕",
     "author": "huangsizhe",
@@ -30,5 +30,8 @@
         "start": "./node_modules/.bin/live-server --port=3000 public",
         "build": "./node_modules/.bin/babel es -d public",
         "test": "./node_modules/.bin/nyc --reporter=text ./node_modules/.bin/mocha --require babel-polyfill --require babel-register"
+    },
+    "dependencies": {
+        "@tensorflow/tfjs": "^1.0.0"
     }
 }

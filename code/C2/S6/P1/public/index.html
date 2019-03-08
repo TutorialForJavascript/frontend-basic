@@ -5,25 +5,26 @@
   <meta charset="utf-8">
   <title>Shared worker</title>
   <link rel="stylesheet" href="style.css" type="text/css">
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0/dist/tf.min.js"></script>
   <script src="index.js" async="async"></script>
 </head>
 
 <body>
   <main>
-    <h1>Shared Worker基本例子--乘</h1>
+    <h1>tfjs-matrix-mul</h1>
     <div class="controls" tabindex="0">
       <form>
         <div>
-          <label for="number1">乘数 1: </label>
-          <input type="text" id="number1" value="0">
+          <label for="n">n: </label>
+          <input type="text" id="n" value="4">
         </div>
         <div>
-          <label for="number2">乘数 2: </label>
-          <input type="text" id="number2" value="0">
+          <label for="m">m: </label>
+          <input type="text" id="m" value="4">
         </div>
+        <input type="submit" value=计算>
       </form>
-      <p class="result1">结果: 0</p>
-      <p><a href="square.html" target="_blank">乘方页面</a></p>
+      <p id="result">结果: 0</p>
     </div>
   </main>
 

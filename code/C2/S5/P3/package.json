@@ -1,7 +1,7 @@
 {
-    "name": "C2-S3-P3",
+    "name": "C2-S5-P3",
     "version": "0.0.1",
-    "description": "可以选择捕获屏幕",
+    "description": "录mp4",
     "author": "huangsizhe",
     "license": "MIT",
     "devDependencies": {

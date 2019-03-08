@@ -1,7 +1,7 @@
 {
-    "name": "C2-S4-P2",
+    "name": "C2-S5-P2",
     "version": "0.0.1",
-    "description": "可以选择捕获屏幕",
+    "description": "",
     "author": "huangsizhe",
     "license": "MIT",
     "devDependencies": {
