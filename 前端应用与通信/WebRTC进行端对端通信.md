@@ -138,6 +138,7 @@ webrtc的连接建立非常看重操作顺序,这个顺序是:
 其实原理很简单,我们从建立连接的顺序可以看出,webrtc通信只是要两端交换`RTCSessionDescription`和`IceCandidate`而已,因此完全可以将这两个信息通过其他途径,比如邮件,比如im来传递即可.
 
 基本的步骤可以是:
+
 1. 将本机的offer和IceCandidate信息以固定格式比如json的形式输出为字符串
 2. 将这个输出的字符串发给要连线的人
 3. 对方解析这个字符串,将之设置好后获取自己的`answer`和`IceCandidate`,然后再传回给本机
