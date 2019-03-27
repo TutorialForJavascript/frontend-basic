@@ -1,0 +1,41 @@
+{
+    "name": "C3-S2",
+    "version": "0.0.1",
+    "description": "可以选择捕获屏幕",
+    "author": "huangsizhe",
+    "license": "MIT",
+    "devDependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-polyfill": "^6.26.0",
+        "babel-preset-env": "^1.7.0",
+        "babel-register": "^6.26.0",
+        "eslint": "^5.12.1",
+        "live-server": "^1.2.1",
+        "mocha": "^5.2.0",
+        "nyc": "^13.1.0"
+    },
+    "babel": {
+        "presets": [
+            [
+                "env",
+                {
+                    "targets": {
+                        "browsers": "> 5%"
+                    }
+                }
+            ]
+        ]
+    },
+    "scripts": {
+        "start": "./node_modules/.bin/live-server --port=3000 public",
+        "build": "./node_modules/.bin/babel es -d public",
+        "browserify": "browserify public/main.js > public/index.js",
+        "build_pb": "protoc -I=schema square_service.proto --js_out=import_style=commonjs:es --grpc-web_out=import_style=commonjs,mode=grpcwebtext:es",
+        "test": "./node_modules/.bin/nyc --reporter=text ./node_modules/.bin/mocha --require babel-polyfill --require babel-register"
+    },
+    "dependencies": {
+        "bluebird": "^3.5.3",
+        "google-protobuf": "^3.7.1",
+        "grpc-web": "^1.0.4"
+    }
+}
