@@ -58,4 +58,24 @@ HTTP协议无法做到服务器主动推送信息,但有一种变通方法:
 
 ## 例子--一个推送时间的服务
 
-这个例子在[S5],我们用koa来构建服务端,这个服务端会每隔1s发送一个当前时间给页面,我们将其写入页面
+这个例子在[S5](https://github.com/TutorialForJavascript/frontend-basic/tree/master/code/C3/S5),我们用koa来构建服务端.
+这个服务端会每隔1s发送一个当前时间给页面,我们将其写入页面,我们定义`/stream`为获取流数据的接口,那么在前端我们可以这样定义:
+
+```js
+function main() {
+    let url = 'http://localhost:5000/stream'
+
+    let evtSource = new EventSource(url);
+    evtSource.onmessage = function (e) {
+        console.log('onmsg: ' + e.data);
+        document.querySelector("#local_time").textContent = e.data
+    }
+    evtSource.onerror = function (e) {
+        console.log('error', e);
+        evtSource.close();
+    }
+}
+main()
+```
+
+当收到消息后我们就会将id为`local_time`的p标签中的内容用收到的内容填充.
