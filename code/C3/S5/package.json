@@ -1,0 +1,38 @@
+{
+  "name": "C3S5",
+  "version": "0.0.1",
+  "description": "simple tools",
+  "author": "huangsizhe",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "eslint": "^5.12.1",
+    "esm": "^3.2.25",
+    "koa": "^2.11.0",
+    "koa-router": "^7.4.0",
+    "koa-sse-stream": "^0.2.0",
+    "koa-static": "^5.0.0",
+    "live-server": "^1.2.1",
+    "mocha": "^5.2.0",
+    "nyc": "^13.1.0"
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "browsers": "> 5%"
+          }
+        }
+      ]
+    ]
+  },
+  "scripts": {
+    "start": "node -r esm backend"
+  }
+}
